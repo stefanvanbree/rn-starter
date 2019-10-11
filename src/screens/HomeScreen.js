@@ -1,6 +1,10 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
+function Separator() {
+  return <View style={styles.separator} />;
+}
+
 const HomeScreen = ({ navigation }) => {
     //console.log(navigation);
   return (<View>
@@ -9,13 +13,29 @@ const HomeScreen = ({ navigation }) => {
             onPress={()=>navigation.navigate('Components')}
             title="Go to Components Demo"
         />
-        <TouchableOpacity onPress={()=>navigation.navigate('List')}>
-          <Text>Go To List Screen</Text>
-        </TouchableOpacity>
+        <Separator/>
+        <Button
+            onPress={()=>navigation.navigate('List')}
+            title="Go to List Demo"
+        />
+        <Separator/>
         <Button
             onPress={()=>navigation.navigate('Image')}
-            title="Go to Images Screen"
+            title="Go to Images Demo"
+            style ={styles.separator}
         />
+        <Separator/>
+        <Button
+            onPress={()=>navigation.navigate('Counter')}
+            title="Go to Counter Demo"
+        />
+        <Separator/>
+         <Button
+            onPress={()=>navigation.navigate('Color')}
+            title="Go to Color Demo"
+
+        />
+        <Separator/>
       </View>
   )
 };
@@ -23,6 +43,11 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30
+  },
+   separator: {
+    marginVertical: 5,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   }
 });
 
