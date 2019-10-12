@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, Button } from 'react-native';
 
 function Separator() {
   return <View style={styles.separator} />;
@@ -33,6 +33,12 @@ const HomeScreen = ({ navigation }) => {
          <Button
             onPress={()=>navigation.navigate('Color')}
             title="Go to Color Demo"
+
+        />
+        <Separator/>
+        <Button
+            onPress={()=>navigation.navigate('Square')}
+            title="Go to Square Demo"
 
         />
         <Separator/>
