@@ -42,6 +42,12 @@ const HomeScreen = ({ navigation }) => {
 
         />
         <Separator/>
+        <Button
+            onPress={()=>navigation.navigate('Text')}
+            title="Go to Text Demo"
+
+        />
+        <Separator/>
       </View>
   )
 };
